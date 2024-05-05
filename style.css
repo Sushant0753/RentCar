@@ -607,6 +607,11 @@ video {
   margin: auto;
 }
 
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
 .mx-6 {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -632,9 +637,29 @@ video {
   margin-bottom: 32px;
 }
 
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+.mx-\[24px\] {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
+.mx-\[16px\] {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.mx-8 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.my-\[16px\] {
+  margin-top: 16px;
+  margin-bottom: 16px;
 }
 
 .mb-2 {
@@ -645,20 +670,48 @@ video {
   margin-right: 2rem;
 }
 
-.mt-\[35px\] {
-  margin-top: 35px;
-}
-
-.mt-1 {
-  margin-top: 0.25rem;
-}
-
 .mt-0 {
   margin-top: 0px;
 }
 
 .mt-0\.5 {
   margin-top: 0.125rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
+}
+
+.mt-\[35px\] {
+  margin-top: 35px;
+}
+
+.mt-\[136px\] {
+  margin-top: 136px;
+}
+
+.mt-\[130px\] {
+  margin-top: 130px;
+}
+
+.mt-\[43px\] {
+  margin-top: 43px;
+}
+
+.mt-\[30px\] {
+  margin-top: 30px;
+}
+
+.mt-\[15px\] {
+  margin-top: 15px;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-\[110px\] {
+  margin-top: 110px;
 }
 
 .block {
@@ -681,8 +734,20 @@ video {
   height: 132px;
 }
 
+.h-\[20px\] {
+  height: 20px;
+}
+
+.h-\[24px\] {
+  height: 24px;
+}
+
 .h-\[360px\] {
   height: 360px;
+}
+
+.h-\[388px\] {
+  height: 388px;
 }
 
 .h-\[44px\] {
@@ -693,12 +758,32 @@ video {
   height: 48px;
 }
 
+.h-\[99px\] {
+  height: 99px;
+}
+
+.w-\[104px\] {
+  width: 104px;
+}
+
 .w-\[120px\] {
   width: 120px;
 }
 
+.w-\[128px\] {
+  width: 128px;
+}
+
 .w-\[130px\] {
   width: 130px;
+}
+
+.w-\[1312px\] {
+  width: 1312px;
+}
+
+.w-\[132px\] {
+  width: 132px;
 }
 
 .w-\[272px\] {
@@ -707,6 +792,10 @@ video {
 
 .w-\[284px\] {
   width: 284px;
+}
+
+.w-\[304px\] {
+  width: 304px;
 }
 
 .w-\[486px\] {
@@ -729,8 +818,24 @@ video {
   width: 100%;
 }
 
-.w-\[136px\] {
-  width: 136px;
+.w-\[256px\] {
+  width: 256px;
+}
+
+.w-\[58px\] {
+  width: 58px;
+}
+
+.w-\[76px\] {
+  width: 76px;
+}
+
+.w-\[90px\] {
+  width: 90px;
+}
+
+.w-\[116px\] {
+  width: 116px;
 }
 
 .items-center {
@@ -821,12 +926,32 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-text-1 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(144 163 191 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-4 {
   padding: 1rem;
+}
+
+.px-\[8px\] {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.px-\[3px\] {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.px-\[6px\] {
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .ps-10 {
@@ -837,13 +962,33 @@ video {
   padding-inline-start: 0.75rem;
 }
 
+.pr-\[3px\] {
+  padding-right: 3px;
+}
+
+.pr-\[6px\] {
+  padding-right: 6px;
+}
+
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
 
+.text-\[12px\] {
+  font-size: 12px;
+}
+
+.text-\[14px\] {
+  font-size: 14px;
+}
+
 .text-\[16px\] {
   font-size: 16px;
+}
+
+.text-\[20px\] {
+  font-size: 20px;
 }
 
 .text-\[32px\] {
@@ -855,8 +1000,20 @@ video {
   line-height: 1.25rem;
 }
 
-.text-\[12px\] {
-  font-size: 12px;
+.text-\[10px\] {
+  font-size: 10px;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
+}
+
+.text-\[22px\] {
+  font-size: 22px;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .font-medium {
@@ -867,8 +1024,9 @@ video {
   font-weight: 600;
 }
 
-.font-bold {
-  font-weight: 700;
+.text-ads-2 {
+  --tw-text-opacity: 1;
+  color: rgb(53 99 233 / var(--tw-text-opacity));
 }
 
 .text-blue-500 {
@@ -881,9 +1039,29 @@ video {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.text-text-1 {
+  --tw-text-opacity: 1;
+  color: rgb(144 163 191 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-text-2 {
+  --tw-text-opacity: 1;
+  color: rgb(26 32 44 / var(--tw-text-opacity));
+}
+
+.text-text-3 {
+  --tw-text-opacity: 1;
+  color: rgb(144 163 191 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .mix-blend-normal {
