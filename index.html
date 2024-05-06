@@ -1,108 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Rental</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-gray-100">
     <nav class="h-[124px] w-full bg-white border border-gray-400 border-r-0 border-l-0 border-t-0 flex">
         <div class="m-auto mx-[60px] text-3xl font-semibold text-blue-500"> CAR</div>
 
-        <form class="h-[44px] w-[492px] mt-[35px]" >   
-            <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+        <form class="h-[44px] w-[492px] mt-[35px]">
+            <label for="default-search"
+                class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
             <div class="relative">
                 <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                        <rect width="100%" height="100%" fill="white"/>
-                        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAylJREFUSEu11U1oXFUUwPH/eRPbmmgREesnIlrtl5AgcVEQCqIL0Y2YOpMmoSidmUYUHK1VMH1nYv1sbBeFdt5EJJJk3tTgStGN6EbRLlpiq21ai9KFpkJBqUxs2rx3dIaZdJp28jHat3v33nd+99xz373CFX5ktvjrVBtu/p1VBNKCWDOwXIzjhnzvIAfP/bHiyMjI+mC2GDWBWCL9MGYDCLeUA5wFOwqyElhSbvsVocvP6Je1kEuAzs4dTUFjoc8giXFSHPoQ59vzp1eMFmfb1vZR5KobxpottLVgLwO3CWTONy5NjexK/T0TuggoBp9qLBwE7gTe+nPR9W9+vvv5yVqz27hRl0wu4jWEV4ATDRNN9w8ObilUj78IiMU1g/C0hDyQ69fR+dY/muxtEQv3m/B+PqPdlwWiSV0nxleIbfUz6XfnG7wyrj2R3mrY2wgPVdeklMGG53RpeI4xjN/8rNsKYgsFVNU5fsq+s1BudRazcni3ninGKAGxhHYAg4ZE8567b6HBK+NjiXQMLCciHbmMOzwNtMfTPSbWG4mwfGiPnqgX6Nj8+r1BGIwZ9OQ93V6dwQdgT/he+rp6g1+ohRbMyPtZfaYa+BRY5nva+j8ABwzGfU8fqwZ2CcRznjb9VyCWcCfEJJPLaupCDRLaZfChONyV26s/14t0dOvdQcBPQKfv6dA0sCHee18o4SFEnvQz7sf1ArGkux6TfQ6sHvb0yDRQ2qpJ/cYMy3vug/X8B2ASS6a/xhDf07WVSU4fFeUtdhiTV/2s+95Csyj/ydsjTmTN0N6eY5cAxYZoUt8Q40XHnNbh7LbD80XaN2mzORTPonfyGd1W87Bre2Hn1ZHCmUMi3A6kfE/3zIVE4+lnRayY8S+LJ2kZGNCzNYFiR1u3XtMQsBPYBHwmQvqvkB8+yepE5cPH49p4rcOaf2vmAo8C/VMRUpGg9E7e0y2XXaJq+am4+4gjMgjcWG4/BZwE7gBuKreNS0hXrl+/KC1xQncIvGTQV0HmvJOXjTurHbPm8p18jxjHEEbNYXTq9KofZ97JM5FZgbnWv1Z/Eaks1RUBquF/ALWfQigDnRjqAAAAAElFTkSuQmCC" x="0" y="0" width="24" height="24"/>
+                        <rect width="100%" height="100%" fill="white" />
+                        <image
+                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAylJREFUSEu11U1oXFUUwPH/eRPbmmgREesnIlrtl5AgcVEQCqIL0Y2YOpMmoSidmUYUHK1VMH1nYv1sbBeFdt5EJJJk3tTgStGN6EbRLlpiq21ai9KFpkJBqUxs2rx3dIaZdJp28jHat3v33nd+99xz373CFX5ktvjrVBtu/p1VBNKCWDOwXIzjhnzvIAfP/bHiyMjI+mC2GDWBWCL9MGYDCLeUA5wFOwqyElhSbvsVocvP6Je1kEuAzs4dTUFjoc8giXFSHPoQ59vzp1eMFmfb1vZR5KobxpottLVgLwO3CWTONy5NjexK/T0TuggoBp9qLBwE7gTe+nPR9W9+vvv5yVqz27hRl0wu4jWEV4ATDRNN9w8ObilUj78IiMU1g/C0hDyQ69fR+dY/muxtEQv3m/B+PqPdlwWiSV0nxleIbfUz6XfnG7wyrj2R3mrY2wgPVdeklMGG53RpeI4xjN/8rNsKYgsFVNU5fsq+s1BudRazcni3ninGKAGxhHYAg4ZE8567b6HBK+NjiXQMLCciHbmMOzwNtMfTPSbWG4mwfGiPnqgX6Nj8+r1BGIwZ9OQ93V6dwQdgT/he+rp6g1+ohRbMyPtZfaYa+BRY5nva+j8ABwzGfU8fqwZ2CcRznjb9VyCWcCfEJJPLaupCDRLaZfChONyV26s/14t0dOvdQcBPQKfv6dA0sCHee18o4SFEnvQz7sf1ArGkux6TfQ6sHvb0yDRQ2qpJ/cYMy3vug/X8B2ASS6a/xhDf07WVSU4fFeUtdhiTV/2s+95Csyj/ydsjTmTN0N6eY5cAxYZoUt8Q40XHnNbh7LbD80XaN2mzORTPonfyGd1W87Bre2Hn1ZHCmUMi3A6kfE/3zIVE4+lnRayY8S+LJ2kZGNCzNYFiR1u3XtMQsBPYBHwmQvqvkB8+yepE5cPH49p4rcOaf2vmAo8C/VMRUpGg9E7e0y2XXaJq+am4+4gjMgjcWG4/BZwE7gBuKreNS0hXrl+/KC1xQncIvGTQV0HmvJOXjTurHbPm8p18jxjHEEbNYXTq9KofZ97JM5FZgbnWv1Z/Eaks1RUBquF/ALWfQigDnRjqAAAAAElFTkSuQmCC"
+                            x="0" y="0" width="24" height="24" />
                     </svg>
                 </div>
-                <input type="search" id="default-search" class="block w-full p-4 ps-10 text-sm rounded-[40px] outline-none border border-gray-400 " placeholder="Search something here" required />
+                <input type="search" id="default-search"
+                    class="block w-full p-4 ps-10 text-sm rounded-[40px] outline-none border border-gray-400 "
+                    placeholder="Search something here" required />
                 <button type="" class=" absolute end-2.5 bottom-3.5 ">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-                        <rect width="100%" height="100%" fill="white"/>
-                        <image xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAe1JREFUSEvFlD1oU1EUx3/n5qNRsKA4FAeHInVwk7oJ1knbirPJVBATBUddCpaDOEo3lZcOlg55gpMgVnBQBxcdnIpf4OBaCopCm7R5x77QlGd4iddo8MJbHuec//mfe89PGPCRAdenp8DMjBY2hrgGjMeNOLPX+YbMLy7qhm9jXQWKZT2I8AoYAz7sFDwKrOSy+VNLd2bXfES6CpTKumRiE0SZyXBhbiUuVrx08xiuuYzJs7CqF70FSld0NDIOtxOcsdfgsRiXa1WtJguVylo24e4PY3hfhpFkXjLOCV9q9/Rzy0Gxos+BiZSOJsNAnyb/Fyt6Flg2ccfFovkueXHKizDQ0y2BTgdIZlii5iMxKl0cBOKGDkB9v5eDtFnGrgRGLXJTyTsQFz0B3tcCPeN9B2mBF67qIdkkHt0YZu8MyYlwZNvwx61G/uTD+7OrfyUQJ7f3QIwTJmwBbwt1bv+TPfDpzifm/6Kis8N+0OHtoF90eAv0i470RUvMJl75Qn3P6npu/VsvdDRFph1W38WNJypaK29wXeDN9jddCzRetN3TRkfKi+qBig4Hmw2+ZrOsGdx4EOitFPgFIOdN7HuqA5/3vAPEcSJ3LlyYe9nG9+/Q4X3Jv6ADPpkhPujwFugXHX8k4DPKzpiBC/wE40D5GZ2MOBIAAAAASUVORK5CYII=" x="0" y="0" width="24" height="24"/>
-                  </svg>
+                        <rect width="100%" height="100%" fill="white" />
+                        <image
+                            xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAe1JREFUSEvFlD1oU1EUx3/n5qNRsKA4FAeHInVwk7oJ1knbirPJVBATBUddCpaDOEo3lZcOlg55gpMgVnBQBxcdnIpf4OBaCopCm7R5x77QlGd4iddo8MJbHuec//mfe89PGPCRAdenp8DMjBY2hrgGjMeNOLPX+YbMLy7qhm9jXQWKZT2I8AoYAz7sFDwKrOSy+VNLd2bXfES6CpTKumRiE0SZyXBhbiUuVrx08xiuuYzJs7CqF70FSld0NDIOtxOcsdfgsRiXa1WtJguVylo24e4PY3hfhpFkXjLOCV9q9/Rzy0Gxos+BiZSOJsNAnyb/Fyt6Flg2ccfFovkueXHKizDQ0y2BTgdIZlii5iMxKl0cBOKGDkB9v5eDtFnGrgRGLXJTyTsQFz0B3tcCPeN9B2mBF67qIdkkHt0YZu8MyYlwZNvwx61G/uTD+7OrfyUQJ7f3QIwTJmwBbwt1bv+TPfDpzifm/6Kis8N+0OHtoF90eAv0i470RUvMJl75Qn3P6npu/VsvdDRFph1W38WNJypaK29wXeDN9jddCzRetN3TRkfKi+qBig4Hmw2+ZrOsGdx4EOitFPgFIOdN7HuqA5/3vAPEcSJ3LlyYe9nG9+/Q4X3Jv6ADPpkhPujwFugXHX8k4DPKzpiBC/wE40D5GZ2MOBIAAAAASUVORK5CYII="
+                            x="0" y="0" width="24" height="24" />
+                    </svg>
                 </button>
             </div>
         </form>
-        
+
         <div class="m-auto mr-8 flex space-x-4 justify-items-end">
-            <button class="rounded-full border border-gray-400 p-2">  <img src="images/heart.svg" alt="Error loading image"> </button>
-            <button class="rounded-full border border-gray-400 p-2">  <img src="images/notification.svg" alt=""> </button>
-            <button class="rounded-full border border-gray-400 p-2">  <img src="images/setting-2.svg" alt=""> </button>
-            <button class="rounded-full border border-gray-400">  <img src="images/profile-circle-svgrepo-com.svg" height="40px" width="40px" alt=""> </button>
+            <button class="rounded-full border border-gray-400 p-2"> <img src="images/heart.svg"
+                    alt="Error loading image"> </button>
+            <button class="rounded-full border border-gray-400 p-2"> <img
+                    src="images/notification.svg" alt=""> </button>
+            <button class="rounded-full border border-gray-400 p-2"> <img
+                    src="images/setting-2.svg" alt=""> </button>
+            <button class="rounded-full border border-gray-400"> <img
+                    src="images/profile-circle-svgrepo-com.svg" height="40px" width="40px" alt="">
+            </button>
         </div>
-        
+
     </nav>
     <div class="mx-[64px] my-[32px] sm:flex justify-evenly">
         <div class="w-[640px] h-[360px] bg-ads-1 rounded-xl flex relative">
-            <img src="images/BG (1).svg" alt="" class = "mix-blend-normal rounded-xl absolute">
+            <img src="images/BG (1).svg" alt="" class="mix-blend-normal rounded-xl absolute">
             <div class="p-4">
                 <div>
                     <p class="font-semibold text-white text-[32px] w-[272px]">The Best Platform for Car Rental</p>
-                    <p class="font-medium text-white text-[16px] w-[284px] my-2">Ease of doing a car rental safely and reliably. Of course at a low price.</p>
+                    <p class="font-medium text-white text-[16px] w-[284px] my-2">Ease of doing a car rental safely and
+                        reliably. Of course at a low price.</p>
                 </div>
-                <button type="submit" class="p-2 my-2 bg-ads-2 text-white font-semibold text-[16px] w-[120px] h-[44px] rounded-md">Rental Car</button>
+                <button type="submit"
+                    class="p-2 my-2 bg-ads-2 text-white font-semibold text-[16px] w-[120px] h-[44px] rounded-md">Rental
+                    Car</button>
             </div>
-            
+
         </div>
         <div class="w-[640px] h-[360px] bg-ads-2 rounded-xl sm:flex hidden relative">
-            <img src="images/BG (2).svg" alt="" class = "mix-blend-normal rounded-xl absolute">
+            <img src="images/BG (2).svg" alt="" class="mix-blend-normal rounded-xl absolute">
             <div class="p-4">
                 <div>
-                    <p class="font-semibold text-white text-[32px] w-[272px]">Easy way to rent a car at a low price</p>
-                    <p class="font-medium text-white text-[16px] w-[284px] my-2">Providing cheap car rental services and safe and comfortable facilities.</p>
+                    <p class="font-semibold text-white text-[32px] w-[272px]">Easy way to rent a car at a best price</p>
+                    <p class="font-medium text-white text-[16px] w-[284px] my-2">Providing best car rental services with
+                        safe and comfortable facilities.</p>
                 </div>
-                <button type="submit" class="p-2 my-2 bg-ads-1 text-white font-semibold text-[16px] w-[120px] h-[44px] rounded-md hover:cursor-pointer">Rental Car</button>
+                <button type="submit"
+                    class="p-2 my-2 bg-ads-1 text-white font-semibold text-[16px] w-[120px] h-[44px] rounded-md hover:cursor-pointer">Rental
+                    Car</button>
             </div>
         </div>
     </div>
     <div class="mx-6 flex justify-evenly ">
-        <div class="w-[582px] h-[132px] bg-white rounded-md" >
+        <div class="w-[582px] h-[132px] bg-white rounded-md">
             <div class="p-4">
-                <input type="radio" name = "pickanddrop" id="pickup" class="">
+                <input type="radio" name="pickanddrop" id="pickup" class="">
                 <label for="pickup" class="hover:cursor-pointer">Pick-Up</label>
             </div>
             <div class="flex justify-evenly w-[486px]">
                 <div class="w-[130px] h-[48px] border border-l-0 border-t-0 border-b-0 border-r-gray-400">
-                    <div class= "font-bold text-[16px]">Locations</div>
-                    <button class="font-medium text-[12px] flex  text-text-1">Select your city <img src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
+                    <div class="font-bold text-[16px]">Locations</div>
+                    <button class="font-medium text-[12px] flex  text-text-1">Select your city <img
+                            src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
                 </div>
                 <div class="w-[130px] h-[48px] border border-l-0 border-t-0 border-b-0 border-r-gray-400">
-                    <div class= "font-bold text-[16px]">Date</div>
-                    <button class="font-medium text-[12px] flex  text-text-1">Select your date<img src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
+                    <div class="font-bold text-[16px]">Date</div>
+                    <button class="font-medium text-[12px] flex  text-text-1">Select your date<img
+                            src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
                 </div>
-                <div >
-                    <div class= "font-bold text-[16px]">Time</div>
-                    <button class="font-medium text-[12px] flex  text-text-1 ">Select your time<img src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
+                <div>
+                    <div class="font-bold text-[16px]">Time</div>
+                    <button class="font-medium text-[12px] flex  text-text-1 ">Select your time<img
+                            src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
                 </div>
             </div>
         </div>
-        
+
         <button>
             <img src="images/Switch.svg" class="" alt="">
         </button>
 
-        <div class="w-[582px] h-[132px] bg-white rounded-md" >
+        <div class="w-[582px] h-[132px] bg-white rounded-md">
             <div class="p-4">
-                <input type="radio" name = "pickanddrop" id="dropoff" class="focus:ring-blue-500 ">
+                <input type="radio" name="pickanddrop" id="dropoff" class="focus:ring-blue-500 ">
                 <label for="dropoff" class="hover:cursor-pointer">Drop-Off</label>
             </div>
             <div class="flex justify-evenly w-[486px]">
                 <div class="w-[130px] h-[48px] border border-l-0 border-t-0 border-b-0 border-r-gray-400">
-                    <div class= "font-bold text-[16px]">Locations</div>
-                    <button class="font-medium text-[12px] flex  text-text-1 ">Select your city<img src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
+                    <div class="font-bold text-[16px]">Locations</div>
+                    <button class="font-medium text-[12px] flex  text-text-1 ">Select your city<img
+                            src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
                 </div>
                 <div class="w-[130px] h-[48px] border border-l-0 border-t-0 border-b-0 border-r-gray-400">
-                    <div class= "font-bold text-[16px]">Date</div>
-                    <button class="font-medium text-[12px] text-text-1 flex "b>Select your date<img src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
+                    <div class="font-bold text-[16px]">Date</div>
+                    <button class="font-medium text-[12px] text-text-1 flex " b>Select your date<img
+                            src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
                 </div>
-                <div >
-                    <div class= "font-bold text-[16px]">Time</div>
-                    <button class="font-medium text-[12px]  text-text-1 flex ">Select your time<img src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
+                <div>
+                    <div class="font-bold text-[16px]">Time</div>
+                    <button class="font-medium text-[12px]  text-text-1 flex ">Select your time<img
+                            src="images/arrow-down.svg" class="mx-2 mt-0.5" alt=""></button>
                 </div>
             </div>
         </div>
@@ -126,21 +152,26 @@
                 </div>
                 <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
                     <div class="flex w-[58px] ">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/gas-station.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/gas-station.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">90L</div>
                     </div>
                     <div class="flex w-[76px] mx-[16px]">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/Car.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/Car.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">Manual</div>
                     </div>
                     <div class="flex w-[90px] ">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/profile-2user.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/profile-2user.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">2 People</div>
                     </div>
                 </div>
                 <div class="h-[44px] flex justify-evenly mt-4">
-                    <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$99.00/ <span class="font-bold text-text-1 text-[14px]">day</span></div>
-                    <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent Now</button>
+                    <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$99.00/ <span
+                            class="font-bold text-text-1 text-[14px]">day</span></div>
+                    <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                        Now</button>
                 </div>
             </div>
             <div class="w-[304px] h-[388px] bg-white rounded-md">
@@ -156,21 +187,26 @@
                 </div>
                 <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
                     <div class="flex w-[58px] ">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/gas-station.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/gas-station.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">80L</div>
                     </div>
                     <div class="flex w-[76px] mx-[16px]">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/Car.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/Car.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">Manual</div>
                     </div>
                     <div class="flex w-[90px] ">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/profile-2user.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/profile-2user.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">2 People</div>
                     </div>
                 </div>
                 <div class="h-[44px] flex justify-evenly mt-4">
-                    <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$80.00/ <span class="font-bold text-text-1 text-[14px]">day</span></div>
-                    <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent Now</button>
+                    <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$80.00/ <span
+                            class="font-bold text-text-1 text-[14px]">day</span></div>
+                    <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                        Now</button>
                 </div>
             </div>
             <div class="w-[304px] h-[388px] bg-white rounded-md">
@@ -186,21 +222,26 @@
                 </div>
                 <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
                     <div class="flex w-[58px] ">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/gas-station.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/gas-station.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">70L</div>
                     </div>
                     <div class="flex w-[76px] mx-[16px]">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/Car.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/Car.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">Manual</div>
                     </div>
                     <div class="flex w-[90px] ">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/profile-2user.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/profile-2user.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">4 People</div>
                     </div>
                 </div>
                 <div class="h-[44px] flex justify-evenly mt-4">
-                    <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$96.00/ <span class="font-bold text-text-1 text-[14px]">day</span></div>
-                    <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent Now</button>
+                    <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$96.00/ <span
+                            class="font-bold text-text-1 text-[14px]">day</span></div>
+                    <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                        Now</button>
                 </div>
             </div>
             <div class="w-[304px] h-[388px] bg-white rounded-md">
@@ -216,25 +257,319 @@
                 </div>
                 <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
                     <div class="flex w-[58px] ">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/gas-station.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/gas-station.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">80L</div>
                     </div>
                     <div class="flex w-[76px] mx-[16px]">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/Car.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/Car.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">Manual</div>
                     </div>
                     <div class="flex w-[90px] ">
-                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img src="images/profile-2user.svg" alt=""></div>
+                        <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                src="images/profile-2user.svg" alt=""></div>
                         <div class="text-text-1 font-medium text-[14px]">2 People</div>
                     </div>
                 </div>
                 <div class="h-[44px] flex justify-evenly mt-4">
-                    <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$80.00/ <span class="font-bold text-text-1 text-[14px]">day</span></div>
-                    <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent Now</button>
+                    <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$80.00/ <span
+                            class="font-bold text-text-1 text-[14px]">day</span></div>
+                    <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                        Now</button>
                 </div>
             </div>
         </div>
-        <div class="my-[16px]"></div>
+        <div class="my-[16px]">
+            <div class="flex justify-between">
+                <div class=" h-[44px] text-text-1 font-semibold text-[16px]">Recommended Cars</div>
+            </div>
+            <div class="h-[388px] w-[1312px] flex justify-evenly">
+                <div class="w-[304px] h-[388px] bg-white rounded-md">
+                    <div class="flex justify-between p-2">
+                        <div class="">
+                            <div class="w-[128px] h-[24px] font-bold text-[20px] text-text-2">All New Rush</div>
+                            <div class="w-[128px] h-[20px] font-bold text-[14px] text-text-3">SUV</div>
+                        </div>
+                        <button><img src="images/Like (1).svg" alt=""></button>
+                    </div>
+                    <div class="w-[304px] h-[99px] mt-[110px]">
+                        <img src="images/Car 5.svg" alt="">
+                    </div>
+                    <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
+                        <div class="flex w-[58px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/gas-station.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">70L</div>
+                        </div>
+                        <div class="flex w-[76px] mx-[16px]">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/Car.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">Manual</div>
+                        </div>
+                        <div class="flex w-[90px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/profile-2user.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">6 People</div>
+                        </div>
+                    </div>
+                    <div class="h-[44px] flex justify-evenly mt-4">
+                        <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$72.00/ <span
+                                class="font-bold text-text-1 text-[14px]">day</span></div>
+                        <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                            Now</button>
+                    </div>
+                </div>
+                <div class="w-[304px] h-[388px] bg-white rounded-md">
+                    <div class="flex justify-between p-2">
+                        <div class="">
+                            <div class="w-[128px] h-[24px] font-bold text-[20px] text-text-2">CR-V</div>
+                            <div class="w-[128px] h-[20px] font-bold text-[14px] text-text-3">SUV</div>
+                        </div>
+                        <button><img src="images/Like.svg" alt=""></button>
+                    </div>
+                    <div class="w-[304px] h-[99px] mt-[110px]">
+                        <img src="images/Car 6.svg" alt="">
+                    </div>
+                    <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
+                        <div class="flex w-[58px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/gas-station.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">80L</div>
+                        </div>
+                        <div class="flex w-[76px] mx-[16px]">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/Car.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">Manual</div>
+                        </div>
+                        <div class="flex w-[90px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/profile-2user.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">6 People</div>
+                        </div>
+                    </div>
+                    <div class="h-[44px] flex justify-evenly mt-4">
+                        <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$80.00/ <span
+                                class="font-bold text-text-1 text-[14px]">day</span></div>
+                        <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                            Now</button>
+                    </div>
+                </div>
+                <div class="w-[304px] h-[388px] bg-white rounded-md">
+                    <div class="flex justify-between p-2">
+                        <div class="">
+                            <div class=" h-[24px] font-bold text-[20px] text-text-2">All New Terios</div>
+                            <div class="w-[128px] h-[20px] font-bold text-[14px] text-text-3">SUV</div>
+                        </div>
+                        <button><img src="images/Like (1).svg" alt=""></button>
+                    </div>
+                    <div class="w-[304px] h-[99px] mt-[110px]">
+                        <img src="images/Car 7.svg" alt="">
+                    </div>
+                    <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
+                        <div class="flex w-[58px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/gas-station.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">90L</div>
+                        </div>
+                        <div class="flex w-[76px] mx-[16px]">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/Car.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">Manual</div>
+                        </div>
+                        <div class="flex w-[90px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/profile-2user.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">6 People</div>
+                        </div>
+                    </div>
+                    <div class="h-[44px] flex justify-evenly mt-4">
+                        <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$74.00/ <span
+                                class="font-bold text-text-1 text-[14px]">day</span></div>
+                        <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                            Now</button>
+                    </div>
+                </div>
+                <div class="w-[304px] h-[388px] bg-white rounded-md">
+                    <div class="flex justify-between p-2">
+                        <div class="">
+                            <div class="w-[128px] h-[24px] font-bold text-[20px] text-text-2">CR-V</div>
+                            <div class="w-[128px] h-[20px] font-bold text-[14px] text-text-3">SUV</div>
+                        </div>
+                        <button><img src="images/Like.svg" alt=""></button>
+                    </div>
+                    <div class="w-[304px] h-[99px] mt-[110px]">
+                        <img src="images/Car 8.svg" alt="">
+                    </div>
+                    <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
+                        <div class="flex w-[58px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/gas-station.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">80L</div>
+                        </div>
+                        <div class="flex w-[76px] mx-[16px]">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/Car.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">Manual</div>
+                        </div>
+                        <div class="flex w-[90px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/profile-2user.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">6 People</div>
+                        </div>
+                    </div>
+                    <div class="h-[44px] flex justify-evenly mt-4">
+                        <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$80.00/ <span
+                                class="font-bold text-text-1 text-[14px]">day</span></div>
+                        <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[388px] w-[1312px] my-4 flex justify-evenly">
+                <div class="w-[304px] h-[388px] bg-white rounded-md">
+                    <div class="flex justify-between p-2">
+                        <div class="">
+                            <div class="h-[24px] font-bold text-[20px] text-text-2">MG ZX Exclusive</div>
+                            <div class="w-[128px] h-[20px] font-bold text-[14px] text-text-3">Hatchback</div>
+                        </div>
+                        <button><img src="images/Like.svg" alt=""></button>
+                    </div>
+                    <div class="w-[304px] h-[99px] mt-[110px]">
+                        <img src="images/Car 9.svg" alt="">
+                    </div>
+                    <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
+                        <div class="flex w-[58px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/gas-station.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">70L</div>
+                        </div>
+                        <div class="flex w-[76px] mx-[16px]">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/Car.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">Manual</div>
+                        </div>
+                        <div class="flex w-[90px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/profile-2user.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">4 People</div>
+                        </div>
+                    </div>
+                    <div class="h-[44px] flex justify-evenly mt-4">
+                        <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$76.00/ <span
+                                class="font-bold text-text-1 text-[14px]">day</span></div>
+                        <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                            Now</button>
+                    </div>
+                </div>
+                <div class="w-[304px] h-[388px] bg-white rounded-md">
+                    <div class="flex justify-between p-2">
+                        <div class="">
+                            <div class="w-[128px] h-[24px] font-bold text-[20px] text-text-2">New MG ZS</div>
+                            <div class="w-[128px] h-[20px] font-bold text-[14px] text-text-3">SUV</div>
+                        </div>
+                        <button><img src="images/Like (1).svg" alt=""></button>
+                    </div>
+                    <div class="w-[304px] h-[99px] mt-[110px]">
+                        <img src="images/Car 10.svg" alt="">
+                    </div>
+                    <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
+                        <div class="flex w-[58px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/gas-station.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">80L</div>
+                        </div>
+                        <div class="flex w-[76px] mx-[16px]">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/Car.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">Manual</div>
+                        </div>
+                        <div class="flex w-[90px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/profile-2user.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">6 People</div>
+                        </div>
+                    </div>
+                    <div class="h-[44px] flex justify-evenly mt-4">
+                        <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$80.00/ <span
+                                class="font-bold text-text-1 text-[14px]">day</span></div>
+                        <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                            Now</button>
+                    </div>
+                </div>
+                <div class="w-[304px] h-[388px] bg-white rounded-md">
+                    <div class="flex justify-between p-2">
+                        <div class="">
+                            <div class=" h-[24px] font-bold text-[20px] text-text-2">MG ZX Excite</div>
+                            <div class="w-[128px] h-[20px] font-bold text-[14px] text-text-3">Hatchback</div>
+                        </div>
+                        <button><img src="images/Like.svg" alt=""></button>
+                    </div>
+                    <div class="w-[304px] h-[99px] mt-[110px]">
+                        <img src="images/Car 11.svg" alt="">
+                    </div>
+                    <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
+                        <div class="flex w-[58px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/gas-station.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">90L</div>
+                        </div>
+                        <div class="flex w-[76px] mx-[16px]">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/Car.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">Manual</div>
+                        </div>
+                        <div class="flex w-[90px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/profile-2user.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">4 People</div>
+                        </div>
+                    </div>
+                    <div class="h-[44px] flex justify-evenly mt-4">
+                        <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$74.00/ <span
+                                class="font-bold text-text-1 text-[14px]">day</span></div>
+                        <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                            Now</button>
+                    </div>
+                </div>
+                <div class="w-[304px] h-[388px] bg-white rounded-md">
+                    <div class="flex justify-between p-2">
+                        <div class="">
+                            <div class="w-[128px] h-[24px] font-bold text-[20px] text-text-2">New MG ZS</div>
+                            <div class="w-[128px] h-[20px] font-bold text-[14px] text-text-3">SUV</div>
+                        </div>
+                        <button><img src="images/Like (1).svg" alt=""></button>
+                    </div>
+                    <div class="w-[304px] h-[99px] mt-[110px]">
+                        <img src="images/Car 12.svg" alt="">
+                    </div>
+                    <div class="mt-[15px] mx-[24px] w-[256px] h-[24px] flex">
+                        <div class="flex w-[58px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/gas-station.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">80L</div>
+                        </div>
+                        <div class="flex w-[76px] mx-[16px]">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/Car.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">Manual</div>
+                        </div>
+                        <div class="flex w-[90px] ">
+                            <div class="text-text-1 font-medium text-[14px] pr-[6px]"> <img
+                                    src="images/profile-2user.svg" alt=""></div>
+                            <div class="text-text-1 font-medium text-[14px]">6 People</div>
+                        </div>
+                    </div>
+                    <div class="h-[44px] flex justify-evenly mt-4">
+                        <div class="w-[116px] h-[44px] text-black font-bold text-[22px]">$80.00/ <span
+                                class="font-bold text-text-1 text-[14px]">day</span></div>
+                        <button class="w-[116px] h-[44px] bg-ads-2 rounded-md text-white text-[16px] font-semibold">Rent
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
