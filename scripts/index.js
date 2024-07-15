@@ -177,3 +177,10 @@ function closeMenu() {
 
 hamburgerBtn.addEventListener('click', openMenu);
 closeMenuBtn.addEventListener('click', closeMenu);
+
+document.addEventListener('DOMContentLoaded', function() {
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+});
